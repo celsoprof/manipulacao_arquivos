@@ -59,12 +59,13 @@ public class GameUI {
 
         games = gameDao.listar();
 
-        System.out.println("LISTA DE GAMES");
-        System.out.println("------------------------------------------------------------------------");
-        System.out.printf("%5s %-20s %-10s %15s %15s%n", "ID", "TITULO", "ESTÚDIO", "VALOR", "LANÇAMENTO");
-        System.out.println("------------------------------------------------------------------------");
+        System.out.println("------------------------------------------------------------------------------------");
+        System.out.println("|LISTA DE GAMES");
+        System.out.println("------------------------------------------------------------------------------------");
+        System.out.printf("|%5s | %-20s | %-20s | %12s | %12s |%n", "ID", "TITULO", "ESTÚDIO", "VALOR", "LANÇAMENTO");
+        System.out.println("------------------------------------------------------------------------------------");
         for (Game g : games){
-            System.out.printf("%5s %-20s %-10s %15s %15s%n",
+            System.out.printf("|%5s | %-20s | %-20s | %12s | %12s |%n",
                     g.getId(),
                     g.getTitulo(),
                     g.getEstudio(),
@@ -72,7 +73,7 @@ public class GameUI {
                     g.getAnoLancamento()
             );
         }
-        System.out.println("------------------------------------------------------------------------");
+        System.out.println("------------------------------------------------------------------------------------");
 
         System.out.println();
         System.out.print("Pressione ENTER para retornar ao menu...");
