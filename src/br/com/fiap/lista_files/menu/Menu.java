@@ -1,6 +1,7 @@
 package br.com.fiap.lista_files.menu;
 
 import br.com.fiap.lista_files.telas.GameUI;
+import br.com.fiap.lista_files.utils.Utils;
 
 import java.util.Scanner;
 
@@ -8,7 +9,7 @@ public class Menu {
 
     public static void construirMenu(){
 
-        limparTela();
+        Utils.limparTela();
         Scanner leitor = new Scanner(System.in);
         GameUI gameUI = new GameUI();
 
@@ -29,7 +30,7 @@ public class Menu {
             case 2: gameUI.exibirGames();
             case 3: gameUI.buscarGamePeloId();
             case 5: sair();
-            default:
+            default: sair();
         }
 
     }
@@ -39,12 +40,6 @@ public class Menu {
         System.out.println("Bye...");
         System.exit(0);
 
-    }
-
-    public static void limparTela(){
-        for(int i = 0; i < 100; i++){
-            System.out.println();
-        }
     }
 
 }

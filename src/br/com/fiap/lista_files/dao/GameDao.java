@@ -10,7 +10,7 @@ import java.util.List;
 
 public class GameDao {
 
-    private final Path arquivo = Paths.get("/Users/celsofurtado/IdeaProjects/manipulacao_arquivos/src/br/com/fiap/lista_files/dados.csv");
+    private final Path arquivo = Paths.get("src/br/com/fiap/lista_files/dados.csv");
     private List<Game> games = new ArrayList<>();
 
     public boolean gravar(Game g) {

@@ -4,6 +4,7 @@ import br.com.fiap.lista_files.App;
 import br.com.fiap.lista_files.dao.GameDao;
 import br.com.fiap.lista_files.menu.Menu;
 import br.com.fiap.lista_files.model.Game;
+import br.com.fiap.lista_files.utils.Utils;
 
 import java.time.Year;
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ public class GameUI {
 
     public void cadastrarGame() {
 
-        Menu.limparTela();
+        Utils.limparTela();
 
         while (resposta.equalsIgnoreCase("s")) {
 
@@ -53,7 +54,7 @@ public class GameUI {
 
     public void exibirGames() {
 
-        Menu.limparTela();
+        Utils.limparTela();
 
         List<Game> games = new ArrayList<>();
 
@@ -84,7 +85,7 @@ public class GameUI {
 
     public void buscarGamePeloId() {
 
-        Menu.limparTela();
+        Utils.limparTela();
 
         Game game = new Game();
 
